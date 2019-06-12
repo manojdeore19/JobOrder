@@ -20,7 +20,7 @@ public class JobRepository {
 		return false;
 	}
 	public Job getJobByName(String name) {
-		if(name != null) {
+		if(name != null && !name.isEmpty()) {
 			for (Job job : jobs) {
 				if(name.equals(job.getName())){
 					return job;
